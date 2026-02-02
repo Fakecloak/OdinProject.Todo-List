@@ -1,58 +1,126 @@
-1. Initialize your project
-If you don’t already have a package.json:
+# 🚀 Webpack Starter Project
 
-bash
+A simple, beginner-friendly Webpack setup to bundle JavaScript files.
+
+Perfect for learning Webpack or starting a small frontend project.
+
+---
+
+## 📦 Prerequisites
+
+Make sure you have **Node.js** installed.
+
+Check using:
+```bash
+node -v
+npm -v
+```
+
+---
+
+## 🛠 Project Setup
+
+### 1️⃣ Initialize the project
+
+Create `package.json`:
+```bash
 npm init -y
+```
 
-2. Install webpack and webpack‑cli
-bash
+---
+
+### 2️⃣ Install Webpack
+
+Install Webpack and Webpack CLI as development dependencies:
+```bash
 npm install --save-dev webpack webpack-cli
-webpack → the bundler itself
+```
 
-webpack-cli → lets you run webpack from the command line
+**What they do:**
+- `webpack` → Bundles your JavaScript
+- `webpack-cli` → Lets you run webpack from the terminal
 
-3. Create project structure
-Typical layout:
+---
 
-Code
+## 🗂 Project Structure
+
+```text
 project/
 ├── src/
 │   └── index.js
 ├── dist/
 │   └── index.html
+├── webpack.config.js
 └── package.json
+```
 
-4. Add a webpack config (optional but recommended)
-Create webpack.config.js in the root:
+---
 
-js
+## ⚙️ Webpack Configuration
+
+Create `webpack.config.js` in the root directory:
+
+```js
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",        // starting point
+  entry: "./src/index.js",
   output: {
-    filename: "main.js",          // bundled file name
+    filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
-  mode: "development"             // or "production"
+  mode: "development",
 };
+```
 
-5. Add npm scripts
-In package.json:
+---
 
-json
+## ▶️ NPM Scripts
+
+Add this inside `package.json`:
+
+```json
 "scripts": {
   "build": "webpack",
   "watch": "webpack --watch"
 }
-6. Run webpack
-One‑time build:
+```
 
-bash
+---
+
+## 🚀 Run the Project
+
+### One-time build
+```bash
 npm run build
-Continuous build (auto‑rebuild on changes):
+```
 
-bash
+### Auto rebuild on file changes
+```bash
 npm run watch
-7. Open your app
-Open dist/index.html in the browser — it will load the bundled main.js.
+```
+
+---
+
+## 🌐 Open in Browser
+
+Open the following file in your browser:
+```text
+dist/index.html
+```
+
+The bundled JavaScript file will be:
+```text
+dist/main.js
+```
+
+---
+
+## ✅ Done!
+
+Your Webpack setup is ready 🎉  
+You can now extend it with loaders, plugins, or frameworks like React.
+
+---
+
+Happy Coding 💙

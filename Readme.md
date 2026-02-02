@@ -123,4 +123,6 @@ You can now extend it with loaders, plugins, or frameworks like React.
 
 ---
 
+https://webpack.js.org/guides/asset-management/
+
 Happy Coding 💙

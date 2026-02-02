@@ -85,3 +85,7 @@ header {
 .todo-item button:hover {
     background-color: #da190b;
 }
+
+.completed {
+    text-decoration: line-through;
+}
